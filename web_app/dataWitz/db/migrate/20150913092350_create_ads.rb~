@@ -1,0 +1,15 @@
+class CreateAds < ActiveRecord::Migration
+  def change
+    create_table :ads do |t|
+      t.string :email
+      t.string :cityName
+      t.string :title
+      t.string :description
+      t.integer :user_id
+      t.string :userMobile
+      t.string :subCategory
+
+      t.timestamps
+    end
+  end
+end

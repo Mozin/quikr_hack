@@ -1,0 +1,12 @@
+<% provide(:title,'Home') %>
+<h1>Welcome to Data Witz</h1>
+<h2>
+Text Analytics Applied Quikr Demo App
+</h2>
+<% if signed_in? %>
+	<%= link_to "Post an add!", "ads/new", class: "btn btn-lg btn-primary" %>	
+
+<%else%>
+	<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<%end%>
+</div>

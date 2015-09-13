@@ -1,0 +1,108 @@
+<%= form_for(@ad) do |f| %>
+  <% if @ad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ad.errors.count, "error") %> prohibited this ad from being saved:</h2>
+
+      <ul>
+      <% @ad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :cityName %><br>
+    <%= f.select :cityName,options_for_select([["Bangalore", "Bangalore"], ["Delhi", "Delhi"],["Chennai","Chennai"],["Mumbai","Mumbai"]]) %>
+  </div>
+  
+    <b> <font color="red">Following are the words that our 96% accurate data analytics model suggests to attract maximum ad outreach and views </font></b>
+    </br>
+<ul style="width:10%; float:left;">
+      <li>sale</li>
+      <li>colour</li>
+      <li>model</li>
+   </ul>
+
+<ul style="width:10%; float:left;">
+      <li>phone</li>
+      <li>mobile</li>
+      <li>black</li>
+   </ul>
+
+   
+   </br>
+   </br>
+   </br>
+   </br>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <b> <font color="red">Following are the words that our 96% accurate data analytics model suggests to attract maximum ad outreach and views </font></b>
+  </br>
+<ul style="width:10%; float:left;">
+      <li>new</li>
+      <li>old</li>
+      <li>colour</li>
+   </ul>
+
+<ul style="width:10%; float:left;">
+      <li>box</li>
+      <li>inch</li>
+      <li>warranty</li>
+   </ul>
+
+   <ul style="width:10%; float:left;">
+      <li>screen</li>
+      <li>condition</li>
+      <li>good</li>
+   </ul>
+   
+   <ul style="width:10%; float:left;">
+      <li>include</li>
+      <li>size</li>
+      <li>condition</li>
+   </ul>
+   </br>
+   </br>
+   </br>
+   </br>
+   
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, rows: 3  %>
+  </div>
+  <div class="field">
+    <%= f.label :MobileNumber %><br>
+    <%= f.text_field :userMobile %>
+  </div>
+  <div class="field">
+    <%= f.label :subCategory %><br>
+    <%= f.select :subCategory ,options_for_select([["Mobile", "Mobile"]])%>
+  </div>
+  <div class="field">
+    <%= f.label :brand_name %><br>
+    <%= f.select :brand_name ,options_for_select([["Apple","Apple"],["Acer","Acer"]])%>
+  </div>
+  <div class="field">
+    <%= f.label :ad_type %><br>
+    <%= f.select :ad_type ,options_for_select([["offer", "offer"]])%>
+  </div>
+  <div class="field">
+    <%= f.label :condition %><br>
+    <%= f.select :condition ,options_for_select([["Used", "Used"],["new", "new"]])%>
+  </div>
+  <div class="field">
+    <%= f.label :you_are %><br>
+    <%= f.select :you_are ,options_for_select([["Dealer","Dealer"],["Individual", "Individual"]])%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

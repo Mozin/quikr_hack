@@ -1,0 +1,30 @@
+<h1>Editing ad</h1>
+
+<h2> Add the following words to get more views </h2>
+<ul style="width:10%; float:left;">
+      <li>new</li>
+      <li>old</li>
+      <li>colour</li>
+   </ul>
+
+<ul style="width:10%; float:left;">
+      <li>box</li>
+      <li>inch</li>
+      <li>warranty</li>
+   </ul>
+
+   <ul style="width:10%; float:left;">
+      <li>screen</li>
+      <li>condition</li>
+      <li>good</li>
+   </ul>
+   
+   <ul style="width:10%; float:left;">
+      <li>include</li><li>size</li><li>condition</li>
+   </ul>
+   </br>
+   
+<%= render 'form' %>
+
+<%= link_to 'Show', @ad %> |
+<%= link_to 'Back', ads_path %>
